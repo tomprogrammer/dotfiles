@@ -64,3 +64,6 @@
 [submodule "vim/.vim/bundle/vim-python-combined"]
 	path = vim/.vim/bundle/vim-python-combined
 	url = https://github.com/mitsuhiko/vim-python-combined.git
+[submodule "vim/.vim/bundle/i3-vim-syntax"]
+	path = vim/.vim/bundle/i3-vim-syntax
+	url = https://github.com/PotatoesMaster/i3-vim-syntax.git
