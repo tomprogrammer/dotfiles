@@ -1,35 +1,73 @@
-Xft.antialias: 1
-Xft.autohint: 0
+! vim: ft=xdefaults
+! --[ Font Rendering ]-------------------------------------
 Xft.dpi: 96
+Xft.antialias: 1
+Xft.rgba: rgb
 Xft.hinting: 1
 Xft.hintstyle: hintfull
-Xft.lcdfilter: lcddefault
-Xft.rgba: rgb
+Xft.autohint: false
+Xft.lcdfilter: lcdlight
 
+! --[ URxvt - General ]-------------------------------------
+URxvt.loginShell:false
+URxvt.scrollBar:false
+URxvt.saveLines:5000
+!URxvt.cursorColor:#83C048
+URxvt.cursorColor: #DCDCCC
+URxvt.cursorColor2: #FFFFEF
+URxvt.highlightColor:#444444
 URxvt.font: xft:Fira Code Retina:size=10
-URxvt.letterSpace: -1
+URxvt.boldFont: xft:Fira Code Retina:size=10:bold
 URxvt.intensityStyles: false
-URxvt.secondaryScreen: 1
-URxvt.secondaryScroll: 0
-URxvt.scrollBar: false
-!URxvt*fading: 0
+URxvt.letterSpace: -1
+URxvt.internalBorder: 0
+!URxvt.underlineColor: #999999
+URxvt.underlineColor: #F0DFAF
+URxvt.cutchars: "()*,<>[]{}|'"
+URxvt.print-pipe: cat >/tmp/xxx
+URxvt.visualBell: false
+URxvt.iso14755: false
+URxvt.iso14755_52: false
+URxvt.scrollWithBuffer: true
+URxvt.scrollTtyOutput: false
+URxvt.scrollTtyKeypress: true
+!URxvt.secondaryScroll: false
 
-URxvt.perl-ext-common: default,url-select,vtwheel,font-size
+! --[ URxvt - URL/Clipboard Handling ]----------------------
+URxvt.perl-ext-common: default,url-select,keyboard-select,vtwheel,font-size
 URxvt.keysym.M-u: perl:url-select:select_next
+URxvt.urlLauncher: firefox
+URxvt.underlineURLs: true
+URxvt.keysym.M-Escape: perl:keyboard-select:activate
+URxvt.keysym.M-s: perl:keyboard-select:search
 URxvt.keysym.C-Up: font-size:increase
 URxvt.keysym.C-Down: font-size:decrease
 URxvt.keysym.C-S-Up: font-size:incglobal
 URxvt.keysym.C-S-Down: font-size:decglobal
-URxvt.url-select.launcher: /usr/bin/firefox
-URxvt.url-select.underline: true
 
-! Zenburn color-scheme
+! --[ URxvt - colors ]--------------------------------------
+URxvt.depth: 32
+!URxvt.background: rgba:0000/0000/0000/A666
+!URxvt.foreground: #eeeeee
 URxvt*background: #3F3F3F
 URxvt*foreground: #DCDCCC
-URxvt*cursorColor: #DCDCCC
-URxvt*cursorColor2: #FFFFEF
+
+! --[ Color Scheme ]----------------------------------------
+!#include "/home/thomas/.config/xcolors/dwmrob"
+!#include "/home/thomas/.config/xcolors/derp"
+!#include "/home/thomas/.config/xcolors/digerati"
+!#include "/home/thomas/.config/xcolors/gnometerm"
+!#include "/home/thomas/.config/xcolors/jasonwryan"
+!#include "/home/thomas/.config/xcolors/phrak1"
+!#include "/home/thomas/.config/xcolors/rezza"
+!#include "/home/thomas/.config/xcolors/rydgel"
+!#include "/home/thomas/.config/xcolors/shiva"
+!#include "/home/thomas/.config/xcolors/tango"
+!#include "/home/thomas/.config/xcolors/zenburn"
+!#include "/home/thomas/.config/xcolors/my-zenburn"
+
+! Zenburn color-scheme
 URxvt*colorUL: #8CD0D3
-URxvt*underlineColor: #F0DFAF
 URxvt*colorBD: #E0CF9F
 URxvt*colorIT: #656555
 !! black dark/light
